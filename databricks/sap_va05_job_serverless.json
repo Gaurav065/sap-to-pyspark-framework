@@ -1,0 +1,20 @@
+{
+  "name": "SAP_ETL_VA05_Sales_Orders",
+  "tags": {
+    "source": "SAP",
+    "tcode": "VA05",
+    "module": "SD",
+    "framework": "sap_to_pyspark",
+    "compute": "serverless"
+  },
+  "tasks": [
+    {
+      "task_key": "run_sap_va05_etl",
+      "description": "Extracts Bronze SAP tables, transforms to Silver, and loads Gold Delta table",
+      "notebook_task": {
+        "notebook_path": "/Users/gaurav.patel.gpp@gmail.com/sap_pipelines/va05_notebook",
+        "source": "WORKSPACE"
+      }
+    }
+  ]
+}
